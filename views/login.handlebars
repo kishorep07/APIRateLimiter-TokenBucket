@@ -1,0 +1,32 @@
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Rate-Limiter</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/login">Login</a></li>
+      <li><a href="/sign-up">Sign-Up</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <h1>Login</h1>
+{{#if error}} <span style="color:#FF0000;">{{error}}</span>{{/if}}
+  <form method="POST" action="/user/login">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" name="username" class="form-control" placeholder="Username">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" name="password" class="form-control" placeholder="Password">
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Login">
+  </form>
+</div>
